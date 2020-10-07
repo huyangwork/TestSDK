@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name              = "TestSDK"
-  s.version           = "1.0.0"
+  s.name              = "TestSDK_rp"
+  s.version           = "0.0.1"
   s.summary           = "一个测试的SDK"
   s.homepage          = "https://github.com/huyangwork/TestSDK"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -11,13 +11,9 @@ Pod::Spec.new do |s|
 
   s.source            = { :git => "https://github.com/huyangwork/TestSDK.git", :tag => "#{s.version}" }
 
-  s.default_subspec   = 'Core'
-
-  s.subspec "Core" do |core|
-    core.resources    = 'TestSDK.bundle'
-    core.vendored_frameworks = 'TestSDK.framework'
-    core.public_header_files = 'TestSDK.framework/Headers/**/*.h'
-  end
+  s.resources    = 'TestSDK.bundle'
+  s.vendored_frameworks = 'TestSDK.framework'
+  #s.public_header_files = 'TestSDK/TestSDK.framework/Headers/*.h'
 
 
 end
